@@ -1,8 +1,10 @@
 package com.shakivhusain.dagger2
 
 import android.util.Log
+import javax.inject.Inject
 
-class UserRegistrationService(
+// Step 2 : how will create ?
+class UserRegistrationService @Inject constructor(
     private val userRepository: UserRepository,
     private val emailService: EmailService
 ) {
