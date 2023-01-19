@@ -8,13 +8,14 @@ import dagger.Provides
 import javax.inject.Named
 
 @Module
-class NotificationServiceModule {
+//class NotificationServiceModule(private val retryCount: Int) {
+class NotificationServiceModule() {
 
 
     // Manual Qualifier , can be typo mistake here
     @Named("email")
     @Provides
-    fun getEmailService():NotificationService{
+    fun getEmailService(): NotificationService {
         return EmailService()
     }
 
@@ -22,8 +23,8 @@ class NotificationServiceModule {
     // Custom Qualifier is use fir to avoid typo mistake.
     @MessageQualifier
     @Provides
-    fun getMessageService():NotificationService{
-        return MessageService()
+    fun getMessageService(retryCount:Int): NotificationService {
+        return MessageService(retryCount)
     }
 
 }
