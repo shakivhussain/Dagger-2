@@ -9,16 +9,17 @@ import javax.inject.Inject
 interface UserRepository{
     fun saveUser(email:String, password:String)
 }
-class SQLRepository @Inject constructor() : UserRepository{
+class SQLRepository @Inject constructor(val analytic: AnalyticService) : UserRepository{
     override fun saveUser(email:String, password:String){
         Log.d(TAG, "User Saved In Db : ")
-        
+        analytic.trackEvent("HeyEvent", "None")
     }
 }
 
-class FirebaseRepository : UserRepository{
+class FirebaseRepository(val analytic: AnalyticService) : UserRepository{
     override fun saveUser(email:String, password:String){
         Log.d(TAG, "User Saved In Firebase : ")
 
+        analytic.trackEvent("FireEvent", "LIKE")
     }
 }

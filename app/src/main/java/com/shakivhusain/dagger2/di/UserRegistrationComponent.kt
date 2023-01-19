@@ -1,15 +1,13 @@
 package com.shakivhusain.dagger2.di
 
-import com.shakivhusain.dagger2.EmailService
-import com.shakivhusain.dagger2.MainActivity
-import com.shakivhusain.dagger2.NotificationService
-import com.shakivhusain.dagger2.UserRegistrationService
+import com.shakivhusain.dagger2.*
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
-@Singleton
-@Component(modules = [NotificationServiceModule::class, UserRepositoryModule::class])
+//@Singleton
+@ApplicationScope
+@Component(modules = [NotificationServiceModule::class, UserRepositoryModule::class, AnalyticsModule::class])
 interface UserRegistrationComponent {
 
     fun inject(mainActivity: MainActivity)
