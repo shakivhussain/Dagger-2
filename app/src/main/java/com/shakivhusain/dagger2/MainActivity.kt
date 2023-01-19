@@ -24,13 +24,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val component = DaggerUserRegistrationComponent.factory().create(3)
-//            .builder()
-//            .notificationServiceModule(NotificationServiceModule(3))
-//            .build()
+        val component = (application as UserApplication).userRegistrationComponent
+
+//        val component1 = DaggerUserRegistrationComponent.factory().create(3)
+//        emailService1=component1.getEmailService()
+
 
         component.inject(this)
-//        val emailService = component.getEmailService()
 
         userRegistrationService.registerUser("shakib@hmail.com", "HeyPass")
     }
