@@ -1,12 +1,14 @@
 package com.shakivhusain.dagger2
 
 import android.util.Log
+import com.shakivhusain.dagger2.di.MessageQualifier
 import javax.inject.Inject
+import javax.inject.Named
 
 // Step 2 : how will create obj ?
 class UserRegistrationService @Inject constructor(
     private val userRepository: UserRepository,
-    private val notificationService: NotificationService
+   @MessageQualifier private val notificationService: NotificationService
 ) {
 
     fun registerUser(email: String, password: String) {
