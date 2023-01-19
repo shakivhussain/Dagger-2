@@ -13,6 +13,12 @@ class MainActivity : AppCompatActivity() {
     @Inject // we need inject on this field
     lateinit var userRegistrationService: UserRegistrationService
 
+    @Inject
+    lateinit var emailService: EmailService
+
+    @Inject
+    lateinit var emailService1: EmailService
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

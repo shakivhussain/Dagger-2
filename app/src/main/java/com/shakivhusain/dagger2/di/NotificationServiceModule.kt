@@ -6,6 +6,7 @@ import com.shakivhusain.dagger2.NotificationService
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
+import javax.inject.Singleton
 
 @Module
 //class NotificationServiceModule(private val retryCount: Int) {

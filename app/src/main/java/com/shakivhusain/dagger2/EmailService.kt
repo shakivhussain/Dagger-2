@@ -3,12 +3,14 @@ package com.shakivhusain.dagger2
 import android.util.Log
 import com.shakivhusain.dagger2.Common.TAG
 import javax.inject.Inject
+import javax.inject.Singleton
 
 
 interface NotificationService {
     fun send(to: String, from: String, body: String)
 }
 
+@Singleton
 class EmailService @Inject constructor() : NotificationService {
     override fun send(to: String, from: String, body: String) {
         Log.d(TAG, " Email Sent")
