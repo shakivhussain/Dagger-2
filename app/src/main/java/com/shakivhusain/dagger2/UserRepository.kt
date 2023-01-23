@@ -2,6 +2,7 @@ package com.shakivhusain.dagger2
 
 import android.util.Log
 import com.shakivhusain.dagger2.Common.TAG
+import com.shakivhusain.dagger2.analytic.AnalyticService
 import javax.inject.Inject
 
 

@@ -1,9 +1,9 @@
 package com.shakivhusain.dagger2.di
 
 import com.shakivhusain.dagger2.*
+import com.shakivhusain.dagger2.analytic.AnalyticsModule
 import dagger.BindsInstance
 import dagger.Component
-import javax.inject.Singleton
 
 //@Singleton
 @ApplicationScope

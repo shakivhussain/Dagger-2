@@ -3,6 +3,7 @@ package com.shakivhusain.dagger2
 import android.util.Log
 import com.shakivhusain.dagger2.Common.TAG
 import javax.inject.Inject
+import javax.inject.Scope
 import javax.inject.Singleton
 
 

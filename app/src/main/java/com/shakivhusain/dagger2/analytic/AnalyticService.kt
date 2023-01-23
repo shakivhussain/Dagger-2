@@ -1,4 +1,4 @@
-package com.shakivhusain.dagger2
+package com.shakivhusain.dagger2.analytic
 
 import android.util.Log
 import com.shakivhusain.dagger2.Common.TAG
@@ -8,14 +8,14 @@ interface AnalyticService {
 }
 // Need Implementation for this interface
 
-class MixPanelAnalytic: AnalyticService{
+class MixPanelAnalytic: AnalyticService {
     override fun trackEvent(eventName: String, eventType: String) {
         Log.d(TAG, " Mic Panel Events : ")
     }
 
 }
 
-class FirebaseAnalytic: AnalyticService{
+class FirebaseAnalytic: AnalyticService {
     override fun trackEvent(eventName: String, eventType: String) {
         Log.d(TAG, " Mic Panel Events : ")
     }
